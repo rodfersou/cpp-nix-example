@@ -12,13 +12,11 @@
       with pkgs; {
         devShells.default = mkShell {
           packages = [
-            (writeShellScriptBin "foo" "echo -n 'I am a custom package'")
             gcc
             cmake
             boost
             cpplint
             astyle
-            pandoc
           ] ++ (
             if ("$INSIDE_DOCKER" != "true") then [
               entr
