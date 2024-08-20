@@ -1,0 +1,7 @@
+#!/bin/bash
+cd -P "$(dirname "$0")/.."
+name=$(basename $PWD)
+
+cmake -S . -B build
+cd build
+cmake --build .
